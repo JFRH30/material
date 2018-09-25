@@ -1,6 +1,8 @@
 // provide access to Angular Material theming variables and mixins.
 @import '~@angular/material/theming';
+@import './../app/pages/home/home-theme';
 
+@import './../app/shared/component/footer/footer-theme';
 // include common styles for Angular Material. Note: this mixin should be included once.
 @include mat-core();
 
@@ -19,3 +21,5 @@ $app-theme: mat-light-theme($app-primary, $app-accent);
 // apply theme to core and every component in the app.
 // add this to angular.json styles.
 @include angular-material-theme($app-theme);
+@include home-theme($app-theme);
+@include footer-theme($app-theme);
