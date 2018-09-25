@@ -1,0 +1,21 @@
+footer {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  div {
+    padding: 1em 2em;
+    text-align: center;
+    h4 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: lighter;
+      line-height: 18px;
+    }
+    h6 {
+      margin: 5px 0;
+      font-size: 12px;
+      font-weight: lighter;
+      line-height: 12px;
+    }
+  }
+}
