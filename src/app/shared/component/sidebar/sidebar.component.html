@@ -1,107 +1,12 @@
 <mat-accordion>
-
-  <mat-expansion-panel>
+  <mat-expansion-panel *ngFor="let route of routes">
     <mat-expansion-panel-header>
       <mat-panel-title>
-        Buttons
+        {{ route.name }}
       </mat-panel-title>
     </mat-expansion-panel-header>
-    <mat-list>
-      <mat-list-item [routerLink]="['./button']"> Button </mat-list-item>
-      <mat-list-item [routerLink]="['./button-toggle']"> Button Toggle </mat-list-item>
+    <mat-list *ngFor="let child of route.subRoutes">
+      <mat-list-item [routerLink]="['categories',route.path, child.path]"> {{ child.name }} </mat-list-item>
     </mat-list>
   </mat-expansion-panel>
-
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Data Table
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-    <mat-list>
-      <mat-list-item [routerLink]="['./paginator']"> Paginator </mat-list-item>
-      <mat-list-item [routerLink]="['./sort']"> Sort </mat-list-item>
-      <mat-list-item [routerLink]="['./table']"> Table </mat-list-item>
-    </mat-list>
-  </mat-expansion-panel>
-
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Form
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-    <mat-list>
-      <mat-list-item [routerLink]="['./autocomplete']"> Autocomplete </mat-list-item>
-      <mat-list-item [routerLink]="['./checkbox']"> Checkbox </mat-list-item>
-      <mat-list-item [routerLink]="['./datepicker']"> Datepicker </mat-list-item>
-      <mat-list-item [routerLink]="['./form-field']"> Form Field </mat-list-item>
-      <mat-list-item [routerLink]="['./input']"> Input </mat-list-item>
-      <mat-list-item [routerLink]="['./radio']"> Radio </mat-list-item>
-      <mat-list-item [routerLink]="['./select']"> Select </mat-list-item>
-      <mat-list-item [routerLink]="['./slider']"> Slider </mat-list-item>
-      <mat-list-item [routerLink]="['./slide-toggle']"> Slide Toggle </mat-list-item>
-    </mat-list>
-  </mat-expansion-panel>
-
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Indicator
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-    <mat-list>
-      <mat-list-item [routerLink]="['./badge']"> Badge </mat-list-item>
-      <mat-list-item [routerLink]="['./chips']"> Chips </mat-list-item>
-      <mat-list-item [routerLink]="['./icon']"> Icon </mat-list-item>
-      <mat-list-item [routerLink]="['./progress-bar']"> Progress Bar </mat-list-item>
-      <mat-list-item [routerLink]="['./progress-spinner']"> Progress Spinner </mat-list-item>
-    </mat-list>
-  </mat-expansion-panel>
-
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Layout
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-    <mat-list>
-      <mat-list-item [routerLink]="['./card']"> Card </mat-list-item>
-      <mat-list-item [routerLink]="['./divider']"> Divider </mat-list-item>
-      <mat-list-item [routerLink]="['./expansion']"> Expansion Panel </mat-list-item>
-      <mat-list-item [routerLink]="['./grid-list']"> Grid List </mat-list-item>
-      <mat-list-item [routerLink]="['./list']"> List </mat-list-item>
-      <mat-list-item [routerLink]="['./stepper']"> Stepper </mat-list-item>
-      <mat-list-item [routerLink]="['./tabs']"> Tabs </mat-list-item>
-      <mat-list-item [routerLink]="['./tree']"> Tree </mat-list-item>
-    </mat-list>
-  </mat-expansion-panel>
-
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Navigation
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-    <mat-list>
-      <mat-list-item [routerLink]="['./menu']"> Menu </mat-list-item>
-      <mat-list-item [routerLink]="['./sidenav']"> Sidenav </mat-list-item>
-      <mat-list-item [routerLink]="['./toolbar']"> Toolbar </mat-list-item>
-    </mat-list>
-  </mat-expansion-panel>
-
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Popups
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-    <mat-list>
-      <mat-list-item [routerLink]="['./bottom-sheet']"> Bottom Sheet </mat-list-item>
-      <mat-list-item [routerLink]="['./dialog']"> Dialog </mat-list-item>
-      <mat-list-item [routerLink]="['./snack-bar']"> Snack Bar </mat-list-item>
-      <mat-list-item [routerLink]="['./tooltip']"> Tooltip </mat-list-item>
-    </mat-list>
-  </mat-expansion-panel>
-
 </mat-accordion>
