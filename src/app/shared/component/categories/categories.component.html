@@ -1,3 +1,7 @@
-<p>
-  categories works!
-</p>
+<mat-grid-list cols="3" rowHeight="3:1" gutterSize="2em">
+
+  <mat-grid-tile *ngFor="let route of routes">
+    <button mat-raised-button [routerLink]="[route.path]"> {{ route.name }} </button>
+  </mat-grid-tile>
+
+</mat-grid-list>
