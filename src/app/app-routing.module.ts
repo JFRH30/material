@@ -13,7 +13,7 @@ const routes: Routes = [
     path: 'component',
     component: ComponentComponent,
     children: [
-      { path: '/:component', component: ApiViewerComponent },
+      { path: ':component', component: ApiViewerComponent },
       { path: 'categories', component: CategoriesComponent },
       { path: 'categories/:name', component: CategoriesComponent },
       { path: '', redirectTo: 'categories', pathMatch: 'full' }
