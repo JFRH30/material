@@ -1,0 +1,18 @@
+app-sidebar {
+  margin: 2em 0;
+  padding: 0 2em;
+}
+
+.content {
+  display: flex;
+}
+
+.viewer {
+  width: 100%;
+  padding: 2em;
+}
+
+router-outlet + * {
+  position: relative;
+  width: 100% !important;
+}
