@@ -18,8 +18,12 @@ header {
 
 section {
   display: flex;
-  justify-content: center;
   margin: 2em 0;
+  justify-content: center;
+  div {
+    width: 450px;
+    margin: 0 2em;
+  }
   img {
     margin: 0 1em;
     height: 200px;
