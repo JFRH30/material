@@ -3,6 +3,7 @@
 @import './../app/pages/home/home-theme';
 
 @import './../app/shared/component/footer/footer-theme';
+@import './../app/shared//component/header/header-theme';
 // include common styles for Angular Material. Note: this mixin should be included once.
 @include mat-core();
 
@@ -23,3 +24,4 @@ $app-theme: mat-light-theme($app-primary, $app-accent);
 @include angular-material-theme($app-theme);
 @include home-theme($app-theme);
 @include footer-theme($app-theme);
+@include header-theme($app-theme);
