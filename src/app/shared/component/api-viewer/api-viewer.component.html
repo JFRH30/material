@@ -31,7 +31,7 @@
 
       <div *ngIf="data.methods">
         <h2>Methods</h2>
-        <table mat-table [dataSource]="data.properties">
+        <table mat-table [dataSource]="data.methods">
           <ng-container matColumnDef="name">
             <th mat-header-cell *matHeaderCellDef> Name </th>
             <td mat-cell *matCellDef="let method"> {{method.name}} </td>
@@ -51,7 +51,7 @@
     <section *ngIf="data.class">
       <h2>Class</h2>
       <h3>{{ data.class.name }}</h3>
-      <p>Selector: {{ data.class.detail }}</p>
+      <p>{{ data.class.detail }}</p>
       <div *ngIf="data.class.properties">
         <h2>Properties</h2>
         <table mat-table [dataSource]="data.class.properties">
@@ -72,7 +72,8 @@
     <section *ngIf="data.interface">
       <h2>Interface</h2>
       <h3>{{ data.interface.name }}</h3>
-      <p>Selector: {{ data.interface.detail }}</p>
+      <p>{{ data.interface.detail }}</p>
+      <h2>Properties</h2>
       <div *ngIf="data.interface.properties">
         <table mat-table [dataSource]="data.interface.properties">
           <ng-container matColumnDef="name">
