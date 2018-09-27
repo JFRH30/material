@@ -13,10 +13,11 @@ const routes: Routes = [
     path: 'component',
     component: ComponentComponent,
     children: [
-      { path: ':component', component: ApiViewerComponent },
       { path: 'categories', component: CategoriesComponent },
-      { path: 'categories/:component', component: CategoriesComponent },
-      { path: '', redirectTo: 'categories/', pathMatch: 'full' }
+      { path: 'categories/:item', component: CategoriesComponent },
+      { path: 'categories/:item/:component', component: ApiViewerComponent },
+      { path: '', redirectTo: 'categories', pathMatch: 'full' },
+      { path: '**', redirectTo: 'categories' }
     ]
   },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
