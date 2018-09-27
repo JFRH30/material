@@ -17,7 +17,6 @@ import { MatTreeModule } from '@angular/material/tree';
     MatGridListModule,
     MatListModule,
     MatStepperModule,
-    MatStepperModule,
     MatTabsModule,
     MatTreeModule
   ],
@@ -27,7 +26,6 @@ import { MatTreeModule } from '@angular/material/tree';
     MatExpansionModule,
     MatGridListModule,
     MatListModule,
-    MatStepperModule,
     MatStepperModule,
     MatTabsModule,
     MatTreeModule
